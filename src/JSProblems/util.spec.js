@@ -1,4 +1,4 @@
-import { generateSum, asyncSeriesExecuter } from './util'
+import { generateSum, asyncSeriesExecuter, getUniqueValues, getLoopValues } from './util'
 
 describe('generateSum', () => {
   let filterSpy, mapSpy, reduceSpy;
@@ -25,5 +25,16 @@ describe('generateSum', () => {
     expect(filterSpy).toHaveBeenCalled();
     expect(mapSpy).toHaveBeenCalled();
     expect(reduceSpy).toHaveBeenCalled();
+  });
+});
+
+describe('arrayUnique', () => {
+
+  it('finds the unique values in the array', () => {
+    // Call your function with a sample input
+    const res = getUniqueValues([1,1,3,4,4,5,2,21,11,21,3,8,5,6,5,4]);
+
+    // Assert that each method was called
+    expect(res).toEqual([1, 2, 3, 4, 5, 6, 8, 11, 21]);
   });
 });
