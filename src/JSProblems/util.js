@@ -50,7 +50,10 @@ export const run = (a1) => {
 // Write a code to convert the settimeout into a promise
 export const asyncFunction = async function() {
   // ...code
-    setTimeout(() => resolve('Hello'), 1000);
+    setTimeout(() => 
+      {
+        // returns Hello
+      }, 1000);
 };
 
 
