@@ -11,15 +11,14 @@ const numbers = [1, 2, 3, 4, 5];
 const doubledNumbers = generateSum(numbers);
 console.log(doubledNumbers);
 
-
+// Write the code to run the promises one after another
 export const asyncSeriesExecuter = async function(promises) {
-  for (let promise of promises) {
-    try{
-      const result = await promise;
-      console.log(result);
-    }catch(e){
-      console.log(e);
-} }
+  // code ...
+}
+
+// Write the code to run the promises in parallel
+export const asyncParallelExecuter = async function(promises) {
+  // code ...
 }
 
 const asyncTask = function(i) {
@@ -40,4 +39,43 @@ const arr = [1,1,3,4,4,5,2,21,11,21,3,8,5,6,5,4];
 export const getUniqueValues = function(arr) {
   // code ...
 }
-console.log(getUniqueValues(arr));
+
+
+// Change the function so that it returns 0,1,2,3,4
+export const run = (a1) => {
+  let b1 = a1;
+  return // ... code
+}
+
+// Write a code to convert the settimeout into a promise
+export const asyncFunction = async function() {
+  // ...code
+    setTimeout(() => resolve('Hello'), 1000);
+};
+
+
+// Write a function that returns the name of the Object.
+function printName() {
+  return this.name;
+};
+
+// Is this working for you?
+const printAge = () => {
+  return this.age;
+}
+
+const John = {
+  name: 'John',
+  age: 23
+};
+
+const Carrie = {
+  name: 'Carrie',
+  age: 24
+};
+
+// Change something in the next lines
+export const printJohnName = ''; // should print the name John
+export const printCarrieName = ''; // should print the name Carrie
+export const printJohnAge = ''; // should print the age 23
+export const printCarrieAge = ''; // should print the age 24

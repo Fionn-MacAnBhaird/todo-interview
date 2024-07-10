@@ -1,4 +1,4 @@
-import { generateSum, asyncSeriesExecuter, getUniqueValues, getLoopValues } from './util'
+import { generateSum, asyncSeriesExecuter, getUniqueValues, run, asyncFunction, printJohn, printCarrie, printJohnName, printCarrieName, printJohnAge, printCarrieAge } from './util'
 
 describe('generateSum', () => {
   let filterSpy, mapSpy, reduceSpy;
@@ -37,4 +37,52 @@ describe('arrayUnique', () => {
     // Assert that each method was called
     expect(res).toEqual([1, 2, 3, 4, 5, 6, 8, 11, 21]);
   });
+});
+
+describe('iterator', () => {
+
+  it('prints', async () => {
+    // Call your function with a sample input
+    const res1 = run(50)();
+
+    expect(res1).toEqual(51);
+  });
+});
+
+describe('Promisify', () => {
+
+  it('converts the timeout into a promise and returns hello', async () => {
+    // Call your function with a sample input
+    const res1 = await asyncFunction();
+
+    expect(res1).toEqual('Hello');
+  });
+});
+
+
+describe('Print John and Carrie names', () => {
+
+  it('prints Johns Name', () => {
+    const res1 = printJohnName();
+
+    expect(res1).toEqual('John');
+  });
+
+  it('prints Carries Name', () => {
+    const res2 = printCarrieName();
+
+    expect(res2).toEqual('Carrie');
+  });
+  it('prints Johns Age', () => {
+    const res1 = printJohnAge();
+
+    expect(res1).toEqual(23);
+  });
+
+  it('prints Carries Age', () => {
+    const res2 = printCarrieAge();
+
+    expect(res2).toEqual(24);
+  });
+
 });
