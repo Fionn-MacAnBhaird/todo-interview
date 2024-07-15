@@ -41,7 +41,7 @@ export const getUniqueValues = function(arr) {
 }
 
 
-// Change the function so that it returns 0,1,2,3,4
+// Change the function so that it returns run(50)() should return 51
 export const run = (a1) => {
   let b1 = a1;
   return // ... code
